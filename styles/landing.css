@@ -32,6 +32,7 @@ body.landing {
 
 .point {
     position: relative;
+    width:100%;
     padding: 2rem;
     text-align: center;
     opacity: 0;
@@ -41,10 +42,9 @@ body.landing {
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+
 }
+
 
 .point  .point-title {
     font-size: 1.25rem;
