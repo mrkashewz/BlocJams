@@ -30,6 +30,30 @@ var albumMarconi = {
     ]
 };
 
+// 3rd Album
+var albumNirvana
+  title: 'Nevermind',
+  artist: 'Nirvana',
+  label: 'DGC',
+  year: '1991',
+  genre: 'grunge',
+  rating: '4.5/5'
+  albumArtURL: 'assets/images/album_covers/22.png',
+  { title: 'Smells Like Teen Spirit', duration: '5:01' },
+  { title: 'In Bloom', duration: '4:14' },
+  { title: 'Come as You Are', duration: '3:39' },
+  { title: 'Breed', duration: '3:03'},
+  { title: 'Lithium', duration: '4:17' },
+  { title: 'Polly', duration: '2:57'}
+  { title: 'Territorial Pissings', duration: '2:22' },
+  { title: 'Drain You', duration: '3:43' },
+  { title: 'Lounge Act', duration: '3:36'},
+  { title: 'Stay Away', duration: '2:32' },
+  { title: 'On a Plain', duration: '3:16'}
+  { title: 'Something in the Way', duration: '3:46'}
+]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
        '<tr class="album-view-song-item">'
@@ -67,4 +91,10 @@ var setCurrentAlbum = function(album) {
 
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     document.getElementsByClassName('album-cover-art').addEventListener("click", function (){
+       for (i=0; i< album.songs.length; i++){
+
+       }
+     })
+
  };
