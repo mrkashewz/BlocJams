@@ -111,8 +111,14 @@ var songRows = document.getElementsByClassName('album-view-song-item');
 });
 for (var i = 0; i < songRows.length; i++) {
      songRows[i].addEventListener('mouseleave', function(event) {
-         // Revert the content back to the number
-         this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
+       // #1
+                var songItem = getSongItem(event.target);
+                var songItemNumber = songItem.getAttribute('data-song-number');
+
+                // #2
+                if (songItemNumber !== currentlyPlayingSong) {
+                    songItem.innerHTML = songItemNumber;
+                }
 
      });
      songRows[i].addEventListener('click', function(event) {
