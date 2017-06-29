@@ -136,14 +136,16 @@ for (var i = 0; i < songRows.length; i++) {
        }
      });
      var findParentByClassName = function(element, targetClass) {
-         if (element) {
-             var currentParent = element.parentElement;
-             while (currentParent.className !== targetClass && currentParent.className !== null) {
-                 currentParent = currentParent.parentElement;
-             }
-             return currentParent;
-         }
-     };
+       if (element) {
+           var currentParent = element.parentElement;
+           while (currentParent.className !== targetClass && currentParent.className !== null) {
+               currentParent = currentParent.parentElement;
+           }
+           if (currentParent !== currentParent.parentElement) {
+               return console.log("No parent found with that class name");
+           }
+       }
+}
 
     var getSongItem = function(element) {
       switch (element.className) {
