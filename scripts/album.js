@@ -18,7 +18,7 @@ var setVolume = function(volume) {
          currentSoundFile.setVolume(volume);
      }
  };
- 
+
 getSongNumberCell = function(number) {
   songNumber.query
   return $('.song-item-number[data-song-number="' + number + '"]');;
@@ -209,7 +209,21 @@ $(document).ready(function() {
      $previousButton.click(previousSong);
      $nextButton.click(nextSong);
 
+ $(togglePlayFromPlayerBar).click(function(event) {
+     var toggles = $('.main-controls .play-pause');
+}
+function togglePlayFromPlayerBar() {
+  if (currentSoundFile.isPaused && currentSoundFile.play.click) {
+     currentSoundFile.play();
+     $(this).html(pauseButtonTemplate);
+     playSoundFile();
+  }
+else if (currentSoundFile.play){
+  $(this).html(playButtonTemplate);
+  pauseSoundFile();
+}
 });
+
      var albums = [albumPicasso, albumMarconi, albumNirvana];
      var index = 1;
      albumImage.addEventListener("click", function(event) {
